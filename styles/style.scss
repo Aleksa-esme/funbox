@@ -1,0 +1,171 @@
+@font-face {
+    font-family: "Exo";
+    src: url("../fonts/Exo2.0-Thin.otf") format("opentype");
+}
+
+%padding-sides-max {
+    padding-left: 62px;
+    padding-right: 62px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    box-sizing: border-box;
+    font-family: "Trebuchet MS";
+}
+
+body {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 5e-05) 49.88%, rgba(0, 0, 0, 0.5) 100%), url(../img/Pattern.png);
+}
+
+.container {
+    margin: 0 auto;
+    min-width: 375px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 400px 400px 320px;
+    grid-template-rows: auto 509px;
+    justify-content: center;
+    align-content: center;
+}
+
+h1 {
+    font-family: 'Exo';
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 1px 1px #000000;
+    grid-column: 1 / 4;
+    margin-bottom: 24px;
+    font-weight: 200;
+}
+
+.card {
+    width: 312px;
+    height: 472px;
+    background-color: #F2F2F2;
+    background-image: url(../img/Photo.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 183%;
+    border-radius: 8px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    clip-path: polygon(13.7% 0, 100% 0, 100% 100%, 0 100%, 0 8.7%);
+    cursor: pointer;
+
+    &-block {
+        &__text {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: #FFFFFF;
+            margin-top: 14px;
+            margin-left: 55.5px;
+            & span {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 15px;
+                color: #1698D9;
+            }
+        }
+        &__button {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: #1698D9;
+            background-color: transparent;
+            border: unset;
+            cursor: pointer;
+            text-decoration: underline;
+            text-decoration-style: dashed; 
+            text-underline-offset: 1px;
+        }
+    }
+    
+    &-border {
+        position: relative;
+        width: 320px;
+        height: 480px;
+        background-color: #1698D9;
+        border-radius: 12px;
+        clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+    }
+
+    &-text {
+        padding-left: 44px;
+        padding-top: 17px;
+        &__title {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #666666;
+            padding-left: 3px;
+        }
+    
+        &__brand {
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 56px;
+            color: #000000;
+            padding-top: 5px;
+        }
+    
+        &__taste {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            color: #000000;
+            padding-bottom: 15px;
+            padding-left: 3px;
+        }
+        
+        &__detail {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #666666;
+            padding-left: 3px;
+            & span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    &-weight {
+        width: 80px;
+        height: 80px;
+        fill: #1698D9;
+        position: absolute;
+        top: 380px;
+        left: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        
+        &__text {
+            position: absolute;
+            margin-bottom: 8px;
+            &-value {
+                font-weight: 400;
+                font-size: 42px;
+                line-height: 22px;
+                text-align: center;
+                color: #FFFFFF;
+            }
+            &-measure {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 22px;
+                text-align: center;
+                color: #FFFFFF;
+                margin-top: 8px;
+            }
+        }
+    }
+
+}
+
