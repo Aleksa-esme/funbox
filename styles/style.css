@@ -9,7 +9,6 @@
   line-height: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Trebuchet MS";
 }
 
 body {
@@ -19,7 +18,7 @@ body {
 
 .container {
   margin: 0 auto;
-  min-width: 375px;
+  min-width: 394px;
   height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -27,6 +26,7 @@ body {
       grid-template-columns: 400px 400px 320px;
   -ms-grid-rows: auto 509px;
       grid-template-rows: auto 509px;
+  grid-row-gap: 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -35,26 +35,19 @@ body {
 }
 
 h1 {
-  font-family: 'Exo';
-  font-size: 36px;
-  line-height: 44px;
+  font: 200 36px/44px 'Exo';
   text-align: center;
-  color: #FFFFFF;
-  text-shadow: 0px 1px 1px #000000;
+  color: #FFF;
+  text-shadow: 0px 1px 1px #000;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1 / 4;
-  margin-bottom: 24px;
-  font-weight: 200;
 }
 
 .card {
   width: 312px;
   height: 472px;
-  background-color: #FFF;
-  background-image: url(../img/Photo.jpg);
-  background-repeat: no-repeat;
-  background-position: 50% 183%;
+  background: url(../img/Photo.jpg) 50% 183% no-repeat #FFF;
   border-radius: 8px;
   position: absolute;
   top: 4px;
@@ -65,25 +58,17 @@ h1 {
 }
 
 .card-block__text {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 15px;
-  color: #FFFFFF;
-  margin-top: 14px;
-  margin-left: 55.5px;
+  font: 400 13px/15px "Trebuchet MS";
+  color: #FFF;
+  margin: 14px 0 0 55.5px;
 }
 
 .card-block__text span {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 15px;
   color: #1698D9;
 }
 
 .card-block__button {
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 15px;
+  font: 400 13px/15px "Trebuchet MS";
   color: #1698D9;
   background-color: transparent;
   border: unset;
@@ -104,40 +89,35 @@ h1 {
           clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
 }
 
+.card-border-mask {
+  z-index: 9998;
+  background-color: #B3B3B3;
+}
+
 .card-text {
-  padding-left: 44px;
-  padding-top: 17px;
+  padding: 17px 0 0 44px;
 }
 
 .card-text__title {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
+  font: 400 16px/19px "Trebuchet MS";
   color: #666666;
   padding-left: 3px;
 }
 
 .card-text__brand {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-  color: #000000;
+  font: 700 48px/56px "Trebuchet MS";
+  color: #000;
   padding-top: 5px;
 }
 
 .card-text__taste {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
-  padding-bottom: 15px;
-  padding-left: 3px;
+  font: 700 24px/28px "Trebuchet MS";
+  color: #000;
+  padding: 0 0 15px 3px;
 }
 
 .card-text__detail {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
+  font: 400 14px/16px "Trebuchet MS";
   color: #666666;
   padding-left: 3px;
 }
@@ -170,19 +150,53 @@ h1 {
 }
 
 .card-weight__text-value {
-  font-weight: 400;
-  font-size: 42px;
-  line-height: 22px;
+  font: 400 42px/22px "Trebuchet MS";
   text-align: center;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 .card-weight__text-measure {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 22px;
+  font: 400 20px/22px "Trebuchet MS";
   text-align: center;
-  color: #FFFFFF;
+  color: #FFF;
   margin-top: 8px;
+}
+
+@media (max-width: 1190px) {
+  .container {
+    height: unset;
+    -ms-grid-columns: 400px 320px;
+        grid-template-columns: 400px 320px;
+    -ms-grid-rows: auto 509px 509px;
+        grid-template-rows: auto 509px 509px;
+    margin: 24px 0;
+  }
+  h1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  .card-block:last-child {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (max-width: 808px) {
+  .container {
+    -ms-grid-columns: 320px;
+        grid-template-columns: 320px;
+    -ms-grid-rows: auto 509px 509px 509px;
+        grid-template-rows: auto 509px 509px 509px;
+  }
+  h1 {
+    grid-column: unset;
+  }
+  .card-block:last-child {
+    grid-column: unset;
+  }
 }
 /*# sourceMappingURL=style.css.map */
