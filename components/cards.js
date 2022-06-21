@@ -122,7 +122,7 @@ const cards = Vue.component('cards', {
         }
     },
     mounted () {
-        this.$parent.getJson(`../DB/getProducts.json`)
+        this.$parent.getJson(`../getProducts.json`)
            .then(data => {
                for(let el of data){
                    this.products.push(el);
