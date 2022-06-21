@@ -122,16 +122,12 @@ const cards = Vue.component('cards', {
         }
     },
     mounted () {
-        // this.$parent.getJson(`../getProducts.json`)
-        //    .then(data => {
-        //        for(let el of data){
-        //            this.products.push(el);
-        //        }
-        //    });
-        let xhr = new XMLHttpRequest();
-        xhr.open('GET', '../getProducts.json', false);
-        xhr.send();
-        this.products = JSON.parse(xhr.responseText);
+        this.$parent.getJson(`https://raw.githubusercontent.com/Aleksa-esme/funbox/vue/DB/getProducts.json`)
+           .then(data => {
+               for(let el of data){
+                   this.products.push(el);
+               }
+           });
     },
     template: `
                 <div>
