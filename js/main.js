@@ -3,13 +3,14 @@ const app = new Vue({
     data: {},
     components: { cards },
     methods: {
-        async getJson(url) {
-            try {
-                const result = await fetch(url);
-                return await result.json();
-            } catch (error) {
-                console.log(error);
-            }
-        },
+        // async getJson(url) {
+        //     try {
+        //         const result = await fetch(url);
+        //         return await result.json();
+        //     } catch (error) {
+        //         console.log(error);
+        //     }
+        // },
+        
     },
 })
