@@ -9,6 +9,7 @@ $accent-color: #1698D9;
 $selected-color: #D91667;
 $light: #666666;
 $mask: #B3B3B3;
+$notInStock: #FFFF66;
 
 * {
     margin: 0;
@@ -59,11 +60,16 @@ h1 {
     
     &-block {
         &__text {
+            width: 320px;
             font: 400 13px/15px "Trebuchet MS";
             color: $white;
-            margin: 14px 0 0 55.5px;
+            text-align: center;
+            margin-top: 14px;
             & span {
                 color: $accent-color;
+            }
+            &-notInStock {
+                color: $notInStock;
             }
         }
         &__button {
@@ -104,6 +110,9 @@ h1 {
             font: 400 16px/19px "Trebuchet MS";
             color: $light;
             padding-left: 3px;
+            &-hovered {
+                color: $selected-color;
+            }
         }
     
         &__brand {

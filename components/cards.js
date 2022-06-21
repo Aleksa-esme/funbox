@@ -1,4 +1,10 @@
 const product = Vue.component('product', {
+    data() {
+        return {
+            notSelected: 'Сказочное заморское яство',
+            selected: 'Котэ не одобряет?'
+        }
+    },
     props: ['product'],
     methods: {
         checkDeclination(number, txt, cases = [2, 0, 1, 1, 1, 2]) {
@@ -6,6 +12,17 @@ const product = Vue.component('product', {
         },
         chooseProduct(product) {
             product.isSelected = !product.isSelected;
+            if (product.isSelected === false) {
+                this.originalText(product);
+            }
+        },
+        changeText(product) {
+            if (!!product.isSelected) {
+                product.title = this.selected;
+            }
+        },
+        originalText(product) {
+            product.title = this.notSelected;
         }
     },
     template: `
@@ -17,12 +34,27 @@ const product = Vue.component('product', {
                 @click="chooseProduct(product)" 
                 :disabled='!product.inStock'
             >
-                <div v-bind:class="['card-border', { active: !!product.isSelected }, { 'card-border-mask': !product.inStock } ]" >            
+                <div 
+                    v-bind:class="['card-border', { active: !!product.isSelected }, { 'card-border-mask': !product.inStock } ]" 
+                >            
                     <div
                         v-bind:class="[!product.inStock ? 'card-mask' : '','card']"
+                        v-on:mouseover="(event) => changeText(product)"
+                        v-on:mouseleave="() => originalText(product)"
                     >
                         <div class="card-text">
-                            <p class="card-text__title">Сказочное заморское яство</p>
+                            <p 
+                                v-if="product.title == this.notSelected"
+                                class="card-text__title"
+                            >
+                                {{ product.title }}
+                            </p>
+                            <p 
+                                v-else="product.title == this.selected"
+                                class="card-text__title card-text__title-hovered"
+                            >
+                                {{ product.title }}
+                            </p>
                             <h2 class="card-text__brand">Нямушка</h2>
                             <h3 class="card-text__taste">{{ product.taste }}</h3>
                             <p class="card-text__detail">
@@ -57,7 +89,9 @@ const product = Vue.component('product', {
                     </div>
                 </div>
             </button>
-            <p class="card-block__text">
+            <p v-if="!!product.inStock && !product.isSelected"
+                class="card-block__text"
+            >
                 Чего сидишь? Порадуй котэ, 
                 <button 
                     class="card-block__button" 
@@ -66,6 +100,16 @@ const product = Vue.component('product', {
                 >
                     купи
                 </button><span>.</span>
+            </p>
+            <p v-if="!!product.inStock && !!product.isSelected"
+                class="card-block__text"
+            >
+                {{ product.description }}
+            </p>
+            <p v-if="!product.inStock"
+                class="card-block__text card-block__text-notInStock"
+            >
+                Печалька, {{ product.taste }} закончился.
             </p>
         </div>
     `
