@@ -165,6 +165,7 @@ h1 {
       -ms-flex-align: end;
           align-items: end;
   justify-items: center;
+  pointer-events: none;
 }
 
 .card-weight-mask {
