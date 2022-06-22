@@ -144,9 +144,9 @@ h1 {
         position: absolute;
         top: 380px;
         left: 220px;
-        display: flex;
-        justify-content: center;
+        display: grid;
         align-items: end;
+        justify-items: center;
         &-mask {
             fill: $mask;
         }

@@ -159,15 +159,12 @@ h1 {
   position: absolute;
   top: 380px;
   left: 220px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  justify-items: center;
 }
 
 .card-weight-mask {
