@@ -118,6 +118,7 @@ h1 {
 .card-text {
   text-align: initial;
   padding: 17px 0 0 44px;
+  pointer-events: none;
 }
 
 .card-text__title {

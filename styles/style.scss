@@ -106,6 +106,7 @@ h1 {
     &-text {
         text-align: initial;
         padding: 17px 0 0 44px;
+        pointer-events: none;
         &__title {
             font: 400 16px/19px "Trebuchet MS";
             color: $light;
