@@ -57,14 +57,24 @@ h1 {
   cursor: pointer;
 }
 
+.card-mask {
+  opacity: 0.5;
+}
+
 .card-block__text {
+  width: 320px;
   font: 400 13px/15px "Trebuchet MS";
   color: #FFF;
-  margin: 14px 0 0 55.5px;
+  text-align: center;
+  margin-top: 14px;
 }
 
 .card-block__text span {
   color: #1698D9;
+}
+
+.card-block__text-notInStock {
+  color: #FFFF66;
 }
 
 .card-block__button {
@@ -79,6 +89,14 @@ h1 {
   text-underline-offset: 1px;
 }
 
+.card-block__button-field {
+  background-color: transparent;
+  border: unset;
+  border-radius: 12px;
+  -webkit-clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+          clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
+}
+
 .card-border {
   position: relative;
   width: 320px;
@@ -89,19 +107,28 @@ h1 {
           clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
 }
 
+.card-border.active {
+  background-color: #D91667;
+}
+
 .card-border-mask {
-  z-index: 9998;
   background-color: #B3B3B3;
 }
 
 .card-text {
+  text-align: initial;
   padding: 17px 0 0 44px;
+  pointer-events: none;
 }
 
 .card-text__title {
   font: 400 16px/19px "Trebuchet MS";
   color: #666666;
   padding-left: 3px;
+}
+
+.card-text__title-hovered {
+  color: #D91667;
 }
 
 .card-text__brand {
@@ -122,7 +149,7 @@ h1 {
   padding-left: 3px;
 }
 
-.card-text__detail span {
+.card-text__detail span:first-child {
   font-weight: 700;
 }
 
@@ -133,15 +160,21 @@ h1 {
   position: absolute;
   top: 380px;
   left: 220px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+  justify-items: center;
+  pointer-events: none;
+}
+
+.card-weight-mask {
+  fill: #B3B3B3;
+}
+
+.card-weight.active {
+  fill: #D91667;
 }
 
 .card-weight__text {

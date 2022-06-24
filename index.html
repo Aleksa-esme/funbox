@@ -8,79 +8,12 @@
     <title>Нямушка</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Ты сегодня покормил кота?</h1>
-        <div class="card-block">
-            <div class="card-border">
-                <div class="card">
-                    <div class="card-text">
-                        <p class="card-text__title">Сказочное заморское яство</p>
-                        <h2 class="card-text__brand">Нямушка</h2>
-                        <h3 class="card-text__taste">с фуа-гра</h3>
-                        <p class="card-text__detail"><span>10</span> порций</p>
-                        <p class="card-text__detail"><span></span> мышь в подарок</p>
-                    </div>
-                    <div class="card-weight">
-                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40"/>
-                        </svg>
-                        <div class="card-weight__text">
-                            <p class="card-weight__text-value">0,5</p>
-                            <p class="card-weight__text-measure">кг</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="card-block__text">Чего сидишь? Порадуй котэ, <button class="card-block__button">купи</button><span>.</span></p>
-        </div>
-        <div class="card-block">
-            <div class="card-border">
-                <div class="card">
-                    <div class="card-text">
-                        <p class="card-text__title">Сказочное заморское яство</p>
-                        <h2 class="card-text__brand">Нямушка</h2>
-                        <h3 class="card-text__taste">с рыбой</h3>
-                        <p class="card-text__detail"><span>40</span> порций</p>
-                        <p class="card-text__detail"><span>2</span> мыши в подарок</p>
-                    </div>
-                    <div class="card-weight">
-                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40"/>
-                        </svg>
-                        <div class="card-weight__text">
-                            <p class="card-weight__text-value">2</p>
-                            <p class="card-weight__text-measure">кг</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="card-block__text">Чего сидишь? Порадуй котэ, <button class="card-block__button">купи</button><span>.</span></p>
-        </div>
-        <div class="card-block">
-            <div class="card-border">
-                <div class="card">
-                    <div class="card-text">
-                        <p class="card-text__title">Сказочное заморское яство</p>
-                        <h2 class="card-text__brand">Нямушка</h2>
-                        <h3 class="card-text__taste">с курой</h3>
-                        <p class="card-text__detail"><span>100</span> порций</p>
-                        <p class="card-text__detail"><span>5</span> мышей в подарок</p>
-                        <p class="card-text__detail">заказчик доволен</p>
-                    </div>
-                    <div class="card-weight">
-                        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="40" cy="40" r="40"/>
-                        </svg>
-                        <div class="card-weight__text">
-                            <p class="card-weight__text-value">5</p>
-                            <p class="card-weight__text-measure">кг</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p class="card-block__text">Чего сидишь? Порадуй котэ, <button class="card-block__button">купи</button><span>.</span></p>
-        </div>
+    <div id="app">
+        <cards></cards>
     </div>
     
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="components/cards.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

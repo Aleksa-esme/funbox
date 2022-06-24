@@ -1,0 +1,35 @@
+[
+  {
+    "id_product": 101,
+    "taste": "с фуа-гра",
+    "title": "Сказочное заморское яство",
+    "description": "Печень утки разварная с артишоками.",
+    "portions": 10,
+    "gift": 1,
+    "weight": "0,5",
+    "inStock": true,
+    "isSelected": false
+  },
+  {
+    "id_product": 102,
+    "taste": "с рыбой",
+    "title": "Сказочное заморское яство",
+    "description": "Головы щучьи с чесноком да свежайшая сёмгушка.",
+    "portions": 40,
+    "gift": 2,
+    "weight": "2",
+    "inStock": true,
+    "isSelected": false
+  },
+  {
+    "id_product": 103,
+    "taste": "с курой",
+    "title": "Сказочное заморское яство",
+    "description": "Филе из цыплят с трюфелями в бульоне.",
+    "portions": 100,
+    "gift": 5,
+    "weight": "5",
+    "inStock": false,
+    "isSelected": false
+  }
+]
